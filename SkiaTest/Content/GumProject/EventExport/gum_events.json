@@ -1,0 +1,62 @@
+{
+  "UserEvents": {
+    "migue": [
+      {
+        "NewName": "SkiaScreen",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 0,
+        "TimestampUtc": "2022-11-30T16:41:20.4289415Z"
+      },
+      {
+        "NewName": "SkiaScreen.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-11-30T16:41:24.4583804Z"
+      },
+      {
+        "NewName": "SkiaScreen.DebugTextInstance",
+        "OldName": "SkiaScreen.TextInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-11-30T16:41:31.8078801Z"
+      },
+      {
+        "NewName": "SkiaScreenCopy",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 0,
+        "TimestampUtc": "2022-11-30T16:55:09.4826647Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "SkiaScreen",
+        "ElementType": "Screens",
+        "EventType": 1,
+        "TimestampUtc": "2022-11-30T16:55:38.0645801Z"
+      },
+      {
+        "NewName": "SkiaGumScreen",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 0,
+        "TimestampUtc": "2022-11-30T16:55:57.3616947Z"
+      },
+      {
+        "NewName": "SkiaGumScreen.DebugTextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-11-30T16:56:00.5863456Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "SkiaScreenCopy",
+        "ElementType": "Screens",
+        "EventType": 1,
+        "TimestampUtc": "2022-11-30T16:56:04.4920076Z"
+      }
+    ]
+  }
+}

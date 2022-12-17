@@ -1,0 +1,108 @@
+{
+  "Tags": [
+    "GLUE"
+  ],
+  "Source": "GLUE",
+  "CreatedByOtherEntities": true,
+  "Is2D": true,
+  "ReferencedFiles": [
+    {
+      "Name": "Entities/MonoGameSprite/Image10000.png",
+      "IsSharedStatic": true,
+      "RuntimeType": "Microsoft.Xna.Framework.Graphics.Texture2D",
+      "ProjectsToExcludeFrom": []
+    }
+  ],
+  "CustomVariables": [
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Type": "String"
+        }
+      ],
+      "Name": "X"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Type": "String"
+        }
+      ],
+      "Name": "Y"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Type": "String"
+        }
+      ],
+      "Name": "Z"
+    }
+  ],
+  "Properties": [
+    {
+      "Name": "InputDevice",
+      "Value": 0
+    }
+  ],
+  "NamedObjects": [
+    {
+      "InstanceName": "SpriteInstance",
+      "SourceClassType": "FlatRedBall.Sprite",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "SourceType",
+          "Value": 2,
+          "Type": "SourceType"
+        },
+        {
+          "Name": "ConditionalCompilationSymbols",
+          "Type": "String"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "TextureScale",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "Microsoft.Xna.Framework.Graphics.Texture2D",
+          "Member": "Texture",
+          "Value": "Image10000",
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Sprite",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    }
+  ],
+  "Name": "Entities\\MonoGameSprite",
+  "CustomClassesForExport": []
+}
