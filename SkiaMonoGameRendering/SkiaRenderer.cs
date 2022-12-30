@@ -11,6 +11,24 @@ namespace SkiaMonoGameRendering
     /// </summary>
     public static class SkiaRenderer
     {
+        public static int TextureCount
+        {
+            get
+            {
+                int count = 0;
+
+                foreach (var info in _renderableInfos.Values)
+                {
+                    if (info.Texture != null)
+                        count++;
+                }
+
+                return count;
+            }
+        }
+
+        public static int RenderableCount { get { return _renderables.Count - _renderablesToRemove.Count; } }
+
         static readonly List<ISkiaRenderable> _renderables = new();
         static readonly List<ISkiaRenderable> _renderablesToRemove = new();
         static readonly Dictionary<ISkiaRenderable, SkiaRenderableInfo> _renderableInfos = new();
