@@ -213,7 +213,7 @@ namespace SkiaMonoGameRendering
                 }
 
                 if (!isRenderTargetSet) // Bind the framebuffer if it wasn't already
-                    SkGl.BindFramebuffer(FramebufferTarget.Framebuffer, info.RenderbufferId);
+                    SkGl.BindFramebuffer(FramebufferTarget.Framebuffer, info.FramebufferId);
 
                 surface.Canvas.Clear(); // Clear the canvas
                 renderable.DrawToSurface(surface); // Perform all the drawing
