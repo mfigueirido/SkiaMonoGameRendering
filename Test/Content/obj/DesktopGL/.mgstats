@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"D:/Desenvolvemento/SkiaMonoGameRendering/Test/Content/DefaultFont.spritefont","D:/Desenvolvemento/SkiaMonoGameRendering/Test/Content/bin/DesktopGL/DefaultFont.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21521,0,3161012
+"D:/Desenvolvemento/SkiaMonoGameRendering/Test/Content/Doge.jpg","D:/Desenvolvemento/SkiaMonoGameRendering/Test/Content/bin/DesktopGL/Doge.xnb","TextureProcessor","Texture2DContent",73913,5760085,0,1530626

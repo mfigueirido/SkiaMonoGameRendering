@@ -6,13 +6,9 @@
 *.csvSettings
 *.sln.metaproj
 packages/
-SkiaTest/SkiaTest/bin/
-SkiaTest/bin/
-SkiaTest/SkiaTest/obj/
-SkiaTest/obj/
-SkiaTest/SkiaTestContent/obj/
-!SkiaTest/x64
-!SkiaTest/x86
-!SkiaTest/Libraries
 SkiaMonoGameRendering/bin/
 SkiaMonoGameRendering/obj/
+Sample/bin
+Sample/obj
+Test/bin
+Test/obj

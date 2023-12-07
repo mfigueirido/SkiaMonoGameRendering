@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using SkiaSharp;
+using System.Collections.Generic;
+using System;
 using static SkiaMonoGameRendering.GlConstants;
 using MgGl = SkiaMonoGameRendering.GlWrapper.MgGlFunctions;
 using SkGl = SkiaMonoGameRendering.GlWrapper.SkGlFunctions;
@@ -83,8 +85,10 @@ namespace SkiaMonoGameRendering
                     return SurfaceFormat.Rgba64;
                 case SKColorType.Alpha8:
                     return SurfaceFormat.Alpha8;
+#if !FNA
                 case SKColorType.Bgra8888:
                     return SurfaceFormat.Bgra32;
+#endif
                 case SKColorType.Rg1616:
                     return SurfaceFormat.Rg32;
                 default: // If no better match found use the default MonoGame format
@@ -114,12 +118,13 @@ namespace SkiaMonoGameRendering
         /// </summary>
         public static void Draw()
         {
+            var doAnyNeedToRender = false;
             // Create textures in MonoGame and cache them along with their IDs
             for (int i = 0; i < _renderables.Count; i++)
             {
                 var renderable = _renderables[i];
 
-                if (renderable.ShouldRender)
+                if (renderable.ShouldRender && renderable.TargetWidth > 0 && renderable.TargetHeight > 0)
                 {
                     if (_renderableInfos.TryGetValue(renderable, out SkiaRenderableInfo info))
                     {
@@ -134,7 +139,17 @@ namespace SkiaMonoGameRendering
                         _renderableInfos.Add(renderable, CreateNewTextureAndInfo(renderable, null));
                     }
                 }
+                doAnyNeedToRender = doAnyNeedToRender || renderable.ShouldRender;
             }
+
+
+            /////////////////////////Early Out///////////////////////////
+            if (!doAnyNeedToRender)
+            {
+                return;
+            }
+            //////////////////////End Early Out//////////////////////////
+
 
             // Make the Skia OpenGL context current
             SkiaGlManager.SetSkiaContextAsCurrent();
@@ -215,7 +230,10 @@ namespace SkiaMonoGameRendering
                 if (!isRenderTargetSet) // Bind the framebuffer if it wasn't already
                     SkGl.BindFramebuffer(FramebufferTarget.Framebuffer, info.FramebufferId);
 
-                surface.Canvas.Clear(); // Clear the canvas
+                if (renderable.ClearCanvasOnRender)
+                {
+                    surface.Canvas.Clear(); // Clear the canvas
+                }
                 renderable.DrawToSurface(surface); // Perform all the drawing
                 surface.Flush(); // Send the data to the GPU
 
