@@ -103,7 +103,7 @@ Run your project and you're done. One beautiful big red circle rendered by Skia 
 
 ## Using Skia Sharp
 
-The example [SkiaEntity.cs ](https://github.com/mfigueirido/SkiaMonoGameRendering/blob/master/Sample/SkiaEntity.cs) file renders a large, anti-aliased red circle. Skia rendering is performed by calling a skia canvas to perform rendering. For example, the following code performs the actual circle rendering:
+The example [SkiaEntity.cs ](https://github.com/mfigueirido/SkiaMonoGameRendering/blob/master/Sample/SkiaEntity.cs) file renders a large, anti-aliased red circle. Skia rendering is performed by calling a Skia canvas to perform rendering. For example, the following code performs the actual circle rendering:
 
 ```cs
 surface.Canvas.DrawCircle(Radius, Radius, Radius, _paint);
