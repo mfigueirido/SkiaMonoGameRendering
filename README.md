@@ -52,7 +52,7 @@ There's a project called **Sample** already set up with everything needed but if
 
 First, you must clone the repository. At the time of this writing there are no prebuilt binaries, or NuGet packages, so you must compile the library yourself. The easiest way is to link this in your game project:
 
-1. Clone the project locally
+1. Clone the project locally.
 1. Add **SkiaMonoGameRendering** project to your solution (.sln).
 2. Add a **SkiaMonoGameRendering** project reference to your MonoGame project (.csproj).
 3. Paste [SkiaEntity.cs ](https://github.com/mfigueirido/SkiaMonoGameRendering/blob/master/Sample/SkiaEntity.cs) into your MonoGame project root folder.
